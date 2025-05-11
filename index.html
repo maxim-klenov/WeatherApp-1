@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="spa приложение погоды в реальном времени" />
+    <!-- preload fonts -->
+    <link rel="preload" href="public/fonts/raleway_regular.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- preload css -->
+    <link rel="stylesheet" href="src/styles/common/fonts.css"> 
+    <link rel="stylesheet" type="text/css" href="src/styles/common/normalize.css" />
+    <link rel="stylesheet" href="src/styles/common/globals.css">
+    <link rel="stylesheet" href="src/styles/common/variables.css">
+    <!-- rest of css -->
+    <link rel="stylesheet" type="text/css" href="src/styles/layouts/header.css" />
+    <link rel="stylesheet" type="text/css" href="src/styles/layouts/main.css" />
+    <link rel="stylesheet" type="text/css" href="src/styles/layouts/slider.css" />
+    <link rel="stylesheet" type="text/css" href="src/styles/layouts/footer.css" />
+    <!-- javascript -->
+    <script src="src/js/header-search.js" defer></script>
+    <title>WeatherApp</title>
+  </head>
+  <body>
+    <h1 class="visually-hidden">приложение погоды в реальном времени</h1>
+    <div class="container">
+      <header class="header grid">
+        <img class="header__logo" alt="логотип приложения weatherapp" src="public/logo/logo.svg" width="192" height="31">
+          <form class="header__search-form" action="#" method="post" name="search-form" autocomplete="off" enctype="text/plain" accept-charset="UTF-8">
+              <label class="visually-hidden" for="search-input">Выполнить поиск по городу</label>
+              <input class="header__search-input" type="search" id="search-input" name="search-input" placeholder="Поиск по городу">
+              <div class="header__search-type">
+                <img class="header__search-icon" src="public/icons/search.svg" alt="начать поиск" width="24" height="24">
+                <img class="header__search-icon-close icon--remove" src="public/icons/close.svg" alt="очистить поле" width="24" height="24"> 
+              </div>
+          </form>
+      </header>
+      <main class="main grid">
+        <section class="weather-info">
+          <address class="weather-info__user-location">
+            <span class="user-location-town">Москва</span>
+            <time datetime="01-06">Суббота, 06 января</time>
+            <time datetime="11:29">11:29</time>
+          </address>
+          <span class="weather-info__degrees">-7°</span>
+          <div class="weather-info__weather">
+            <figure class="weather-type">
+              <img alt="затуманенное облако" src="public/icons/cloud.svg" width="24" height="24">
+              <figcaption>Облачно</figcaption>
+            </figure>
+            <span class="weather-feel-temp">Ощущается как -11°</span>
+          </div>
+        </section>
+        <section class="weather-details">
+          <ul class="weather-details__list">
+            <li>
+              <div class="weather-details__list-item"></div>
+            </li>
+            <li>
+              <div class="weather-details__list-item"></div>
+            </li>
+            <li>
+              <div class="weather-details__list-item"></div>
+            </li>
+            <li>
+              <div class="weather-details__list-item"></div>
+            </li>
+            <li>
+              <div class="weather-details__list-item"></div>
+            </li>
+            <li>
+              <div class="weather-details__list-item"></div>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <section class="slider"></section>
+      <section class="footer"></section>
+    </div>
+  </body>
+</html>

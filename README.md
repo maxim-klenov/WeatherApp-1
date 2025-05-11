@@ -1,0 +1,1 @@
+<h1> WeatherApp - landing page of SPA application </h1>
