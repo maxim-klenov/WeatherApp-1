@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "raleway-regular";
+  src:url('../../../public/fonts/raleway_regular.woff2') format('woff2'),
+      url('../../../public/fonts/raleway_regular.woff') format('woff');
+  font-weight: 400;
+  font-display: swap;
+}
