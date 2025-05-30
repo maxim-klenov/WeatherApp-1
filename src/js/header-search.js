@@ -1,33 +1,31 @@
 const searchInput = document.getElementById('search-input');
-const searchIcon = document.querySelector('.header__search-icon');
-const searchIconClose = document.querySelector('.header__search-icon-close');
-
-function iconClose() {
-  searchIcon.classList.add('icon--remove');
-  searchIconClose.classList.remove('icon--remove');
-}
-function iconSearch() {
-  searchIcon.classList.remove('icon--remove');
-  searchIconClose.classList.add('icon--remove');
-}
+const buttonSearch = document.querySelector('.type--search');
+const buttonClear = document.querySelector('.type--clear');
 
 searchInput.addEventListener('input', (e) => {
   console.log(e.target.value);
-  if (e.target.value !== '') {
-    searchInput.classList.add('input--active');
-  } else {
-    searchInput.classList.remove('input--active');
-  }
+  searchInput.classList.toggle('input--active', e.target.value !== '');
 });
+
 searchInput.addEventListener('focus', () => {
-  iconClose()
+  toggleButtonsVisibility(true);
 });
+
 searchInput.addEventListener('blur', () => {
-  if (!searchInput.classList.contains('input--active')) {
-    iconSearch()
-  }
+  !searchInput.classList.contains('input--active') && toggleButtonsVisibility(false);
 });
-searchIconClose.addEventListener('click', () => {
+
+buttonClear.addEventListener('click', () => {
   searchInput.value = '';
+  searchInput.classList.remove('input--active');
+  toggleButtonsVisibility(false);
   searchInput.focus();
-})
+});
+
+buttonSearch.addEventListener('click', () => searchInput.focus());
+
+
+function toggleButtonsVisibility(removeSearchIcon) {
+  buttonSearch.classList.toggle("button--remove", removeSearchIcon);
+  buttonClear.classList.toggle("button--remove", !removeSearchIcon);
+}
