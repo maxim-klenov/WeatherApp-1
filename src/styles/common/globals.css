@@ -5,8 +5,8 @@ body {
   color: var(--color-light);
   background-color: var(--bg-layer-blur);
   background-image: image-set(
-    url('../../../public/img/bg-image.webp') type("image/webp"),
-    url('../../../public/img/bg-image.jpg') type("image/jpeg")
+    url("../../../public/img/bg-image.webp") type("image/webp"),
+    url("../../../public/img/bg-image.jpg") type("image/jpeg")
   );
   background-repeat: no-repeat;
   background-position: center;
@@ -19,6 +19,7 @@ body {
   backdrop-filter: blur(50px);
   border-radius: 8px;
   max-width: 1120px;
+  min-width: 1120px;
   margin: 32px auto;
 }
 
@@ -30,16 +31,16 @@ body {
 }
 
 .visually-hidden {
-  position: absolute!important;
-  width: 1px!important;
-  height: 1px!important;
-  margin: -1px!important;
-  border: 0!important;
-  padding: 0!important;
-  white-space: nowrap!important;
-  clip-path: inset(100%)!important;
-  clip: rect(0 0 0 0)!important;
-  overflow: hidden!important;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
 }
 
 .container > * {

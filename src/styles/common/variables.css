@@ -7,7 +7,7 @@
   --font-size-112: 7rem;
   --font-size-20: 1.25rem;
   --font-size-24: 1.5rem;
-  
+
   --color-light: rgba(245, 244, 244, 1);
   --color-grey: rgba(112, 112, 112, 1);
   --color-dark: rgba(84, 84, 84, 1);
@@ -16,5 +16,4 @@
   --bg-color-layer: rgba(112, 112, 112, 0.1);
 
   --border-radius: 8px;
-
 }
