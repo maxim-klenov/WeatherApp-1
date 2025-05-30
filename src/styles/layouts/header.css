@@ -1,11 +1,14 @@
 .header__logo {
   width: 192px;
   height: 48px;
+  user-select: none;
 }
+
 .header__search-form {
   position: relative;
   margin: 0;
 }
+
 .header__search-input {
   width: 506px;
   padding: 12px 16px;
@@ -17,23 +20,41 @@
   font-size: var(--font-size-20);
   transition: background-color 100ms ease;
 }
+
 .header__search-input:hover,
 .header__search-input:focus,
-.input--active{
+.input--active {
   background-color: var(--bg-color-light-accent);
 }
+
 .header__search-type {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 12px 16px;
 }
+
 .header__search-icon {
   color: var(--color-dark);
 }
-.header__search-icon-close{
-  cursor: pointer;
+
+.header__search-button {
+  width: 24px;
+  height: 24px;
+  border: none;
+  padding: 0;
+  width: 56px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
 }
-.icon--remove {
+
+.header__search-form:not(:focus-within) .type--clear img {
+  filter: brightness(40%) contrast(120%) grayscale(100%);
+  /* цвет крестика #202020 кода фокус инпута исчез */
+}
+
+.button--remove {
   display: none;
 }
