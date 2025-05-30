@@ -1,46 +1,58 @@
-.main{
-}
-.weather-info{
+.weather-info {
   display: grid;
   row-gap: 64px;
   padding: 8px;
   text-align: center;
 }
-.weather-info__user-location{
+
+.weather-info__user-location {
   display: grid;
   row-gap: 8px;
   font-size: var(--font-size-20);
-    
 }
-.user-location-town{
+
+.user-location-town {
   font-size: var(--font-size-24);
   font-weight: var(--font-weight-semibold);
 }
-.weather-info__degrees{
+
+.weather-info__degrees {
   font-weight: var(--font-weight-semibold);
   font-size: var(--font-size-112);
 }
-.weather-info__weather{
+
+.weather-info__degrees span {
+  -webkit-text-stroke: 5px;
+  text-stroke: 5px;
+  /* толщина цифр */
+  padding-right: 10px;
+}
+
+.weather-info__weather {
   font-size: var(--font-size-20);
   display: grid;
   row-gap: 8px;
 }
-.weather-type{
+
+.weather-type {
   display: flex;
   align-items: center;
   justify-content: center;
   column-gap: 8px;
 }
-.weather-type img{
+
+.weather-type img {
   height: 24px;
   width: 24px;
 }
-.weather-details__list{
+
+.weather-details__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
 }
-.weather-details__list-item{
+
+.weather-details__list-item {
   width: 158px;
   height: 196px;
   border-radius: var(--border-radius);
