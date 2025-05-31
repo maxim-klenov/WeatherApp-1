@@ -1,5 +1,7 @@
 :root {
+  --z-index-base: 0;
   --font-family-regular: "raleway-regular", sans-serif;
+
   --font-weight-normal: 400;
   --font-weight-bold: 600;
   --font-weight-semibold: 700;
