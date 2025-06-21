@@ -1,6 +1,9 @@
+html {
+  font-size: 62.5%; /* 62.5% of 16px = 10px */
+}
 body {
   font-family: var(--font-family-regular);
-  font-weight: var(--font-weight-normal);
+  font-size: 1.6rem; /* for consistency to 62.5% */
   font-variant-numeric: lining-nums;
   color: var(--color-light);
   background-color: var(--bg-layer-blur);
@@ -14,35 +17,6 @@ body {
   background-attachment: fixed;
 }
 
-.container {
-  background-color: var(--bg-color-layer);
-  backdrop-filter: blur(50px);
-  border-radius: 8px;
-  max-width: 1120px;
-  min-width: 1120px;
-  margin: 32px auto;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 506px;
-  align-items: center;
-  column-gap: 16px;
-}
-
-.visually-hidden {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  border: 0 !important;
-  padding: 0 !important;
-  white-space: nowrap !important;
-  clip-path: inset(100%) !important;
-  clip: rect(0 0 0 0) !important;
-  overflow: hidden !important;
-}
-
 .container > * {
-  padding: 32px;
+  padding: 3.2rem;
 }

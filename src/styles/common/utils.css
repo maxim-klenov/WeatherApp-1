@@ -1,0 +1,29 @@
+.container {
+  background-color: var(--bg-color-layer);
+  backdrop-filter: blur(25px);
+  border-radius: var(--border-radius);
+  max-width: 112rem;
+  width: 100%; /* Fluid width */
+  min-width: min(112rem, 100%);
+  margin: 32px auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 50.6rem;
+  align-items: center;
+  column-gap: 1.6rem;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
