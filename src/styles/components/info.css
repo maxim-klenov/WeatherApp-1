@@ -1,0 +1,38 @@
+.weather-info {
+  display: grid;
+  row-gap: 6.5rem;
+  text-align: center;
+}
+
+.weather-info__user-location {
+  display: grid;
+  row-gap: 1.3rem;
+  font-size: var(--font-size-20);
+}
+
+.user-location-town {
+  font-size: var(--font-size-24);
+  font-family: var(--font-family-semibold);
+}
+
+.weather-info__degrees {
+  font-family: var(--font-family-bold);
+  font-size: var(--font-size-112);
+}
+
+.weather-info__weather {
+  font-size: var(--font-size-20);
+  display: grid;
+  row-gap: 0.4em;
+}
+
+.weather-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.8rem;
+  & img {
+    height: 2.4rem;
+    width: 2.4rem;
+  }
+}
