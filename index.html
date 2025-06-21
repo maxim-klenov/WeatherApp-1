@@ -12,14 +12,14 @@
     <link rel="stylesheet" href="src/styles/common/fonts.css" />
     <link rel="stylesheet" href="src/styles/common/normalize.css" />
     <link rel="stylesheet" href="src/styles/common/globals.css" />
+    <link rel="stylesheet" href="src/styles/common/utils.css" />
     <link rel="stylesheet" href="src/styles/common/variables.css" />
     <!-- rest of css -->
-    <link rel="stylesheet" href="src/styles/layouts/header.css" />
-    <link rel="stylesheet" href="src/styles/layouts/main.css" />
-    <link rel="stylesheet" href="src/styles/layouts/slider.css" />
-    <link rel="stylesheet" href="src/styles/layouts/footer.css" />
-    <!-- javascript -->
-    <script src="src/js/header-search.js" defer></script>
+    <link rel="stylesheet" href="src/styles/components/header.css" />
+    <link rel="stylesheet" href="src/styles/components/info.css" />
+    <link rel="stylesheet" href="src/styles/components/details.css" />
+    <link rel="stylesheet" href="src/styles/components/slider.css" />
+    <link rel="stylesheet" href="src/styles/components/footer.css" />
     <title>WeatherApp</title>
   </head>
   <body>
@@ -64,21 +64,7 @@
         </search>
       </header>
       <main class="main grid">
-        <section class="weather-info">
-          <address class="weather-info__user-location">
-            <span class="user-location-town">Москва</span>
-            <time datetime="01-06">Суббота, 06 января</time>
-            <time datetime="11:29">11:29</time>
-          </address>
-          <span class="weather-info__degrees"><span>-7</span>°</span>
-          <div class="weather-info__weather">
-            <figure class="weather-type">
-              <img alt="затуманенное облако" src="public/icons/cloud.svg" width="24" height="24" />
-              <figcaption>Облачно</figcaption>
-            </figure>
-            <span class="weather-feel-temp">Ощущается как -11°</span>
-          </div>
-        </section>
+        <section class="weather-info"></section>
         <section class="weather-details">
           <ul class="weather-details__list">
             <li>
@@ -101,9 +87,13 @@
             </li>
           </ul>
         </section>
+        <section class="slider"></section>
       </main>
-      <section class="slider"></section>
-      <section class="footer"></section>
+      <footer></footer>
     </div>
+
+    <!-- javascript -->
+    <script src="src/js/header-search.js"></script>
+    <script type="module" src="src/js/main.js"></script>
   </body>
 </html>
