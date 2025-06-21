@@ -1,7 +1,20 @@
 @font-face {
   font-family: "raleway-regular";
-  src: url("../../../public/fonts/raleway_regular.woff2") format("woff2"),
-    url("../../../public/fonts/raleway_regular.woff") format("woff");
+  src: url("../../../public/fonts/raleway_regular.woff2") format("woff2");
   font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "raleway-semibold";
+  src: url("../../../public/fonts/raleway_semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "raleway-bold";
+  src: url("../../../public/fonts/raleway_bold.woff2") format("woff2");
+  font-weight: 700;
   font-display: swap;
 }
