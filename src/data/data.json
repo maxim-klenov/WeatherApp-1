@@ -1,0 +1,82 @@
+[
+  {
+    "user": {
+      "town": "Москва",
+      "date": "Суббота, 06 января",
+      "time": "11:29"
+    }
+  },
+  {
+    "weather": {
+      "unit": "°",
+      "temperature": -7,
+      "condition": {
+        "alt": "затуманенное облако",
+        "src": "public/icons/cloud.svg",
+        "caption": "Облачно",
+        "feelTemp": -11
+      }
+    }
+  },
+  {
+    "detailed": [
+      {
+        "title": "Влажность",
+        "src": "humidity.svg",
+        "value": "75 %",
+        "meteobar": {
+          "type": "progress",
+          "min": "0",
+          "max": "100",
+          "value": "60"
+        },
+        "description": "0%~@~100%"
+      },
+      {
+        "title": "Давление",
+        "src": "barometr.svg",
+        "value": "761",
+        "meteobar": {
+          "type": "pressure",
+          "min": "0",
+          "max": "100",
+          "value": "76"
+        },
+        "description": "Повышенное"
+      },
+      {
+        "title": "Видимость",
+        "src": "visibility.svg",
+        "value": "28 км",
+        "meteobar": {
+          "type": "progress",
+          "min": "0",
+          "max": "100",
+          "value": "20"
+        },
+        "description": "Нормальная"
+      },
+      {
+        "title": "Рассвет",
+        "src": "sunrise.svg",
+        "value": "8:42",
+        "meteobar": null,
+        "description": "Прошло: 02:47"
+      },
+      {
+        "title": "Закат",
+        "src": "sunset.svg",
+        "value": "16:37",
+        "meteobar": null,
+        "description": "Осталось: 05:08"
+      },
+      {
+        "title": "Сила ветра",
+        "src": "direction/northwest.svg",
+        "value": "2 м/с",
+        "meteobar": null,
+        "description": "Северо-западный"
+      }
+    ]
+  }
+]
