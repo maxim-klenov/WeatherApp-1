@@ -1,7 +1,6 @@
 .header__logo {
   width: 19.2rem;
   height: 4.8rem;
-  user-select: none;
 }
 
 .header__search-form {
@@ -47,13 +46,13 @@
   width: 5.6rem;
   height: 4.8rem;
   user-select: none;
-  & img {
+  & svg {
     width: 2.4rem;
     height: 2.4rem;
   }
 }
 
-.type--clear:hover {
+.type--clear:hover svg {
   filter: brightness(40%) contrast(120%) grayscale(100%);
   /* цвет крестика #202020 кода фокус инпута исчез */
 }
