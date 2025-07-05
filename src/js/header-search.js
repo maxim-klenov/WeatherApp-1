@@ -7,10 +7,16 @@ function toggleButtonsVisibility(removeSearchIcon) {
   buttonClear.classList.toggle("button--remove", !removeSearchIcon);
 }
 
+searchInput.addEventListener("keypress", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+  }
+});
+
 searchInput.addEventListener('input', (e) => {
   console.log(e.target.value);
   searchInput.classList.toggle('input--active', e.target.value !== '');
-  buttonClear.tabIndex = 0; // while input has value = "button clear" accessable for "tab"
+  buttonClear.tabIndex = 0; // пока инпут заполнен = иконка "очистить" доступна для "tab"
   if (e.target.value === '') {
     buttonClear.tabIndex = -1;
   }
