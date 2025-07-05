@@ -11,8 +11,7 @@
       "unit": "°",
       "temperature": -7,
       "condition": {
-        "alt": "затуманенное облако",
-        "src": "public/icons/cloud.svg",
+        "src": "public/icons/general.svg#cloud",
         "caption": "Облачно",
         "feelTemp": -11
       }
@@ -22,7 +21,7 @@
     "detailed": [
       {
         "title": "Влажность",
-        "src": "humidity.svg",
+        "src": "humidity",
         "value": "75 %",
         "meteobar": {
           "type": "progress",
@@ -34,7 +33,7 @@
       },
       {
         "title": "Давление",
-        "src": "barometr.svg",
+        "src": "barometr",
         "value": "761",
         "meteobar": {
           "type": "pressure",
@@ -46,7 +45,7 @@
       },
       {
         "title": "Видимость",
-        "src": "visibility.svg",
+        "src": "visibility",
         "value": "28 км",
         "meteobar": {
           "type": "progress",
@@ -58,21 +57,21 @@
       },
       {
         "title": "Рассвет",
-        "src": "sunrise.svg",
+        "src": "sunrise",
         "value": "8:42",
         "meteobar": null,
         "description": "Прошло: 02:47"
       },
       {
         "title": "Закат",
-        "src": "sunset.svg",
+        "src": "sunset",
         "value": "16:37",
         "meteobar": null,
         "description": "Осталось: 05:08"
       },
       {
         "title": "Сила ветра",
-        "src": "direction/northwest.svg",
+        "src": "direction-northwest",
         "value": "2 м/с",
         "meteobar": null,
         "description": "Северо-западный"
