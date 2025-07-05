@@ -6,32 +6,17 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="spa приложение погоды в реальном времени" />
     <link rel="icon" href="public/favicon/favicon.ico" sizes="32x32" />
-    <!-- preload fonts -->
     <link rel="preload" href="public/fonts/raleway_regular.woff2" as="font" type="font/woff2" crossorigin />
-    <!-- preload css -->
-    <link rel="stylesheet" href="src/styles/common/fonts.css" />
-    <link rel="stylesheet" href="src/styles/common/normalize.css" />
-    <link rel="stylesheet" href="src/styles/common/globals.css" />
-    <link rel="stylesheet" href="src/styles/common/utils.css" />
-    <link rel="stylesheet" href="src/styles/common/variables.css" />
-    <!-- rest of css -->
-    <link rel="stylesheet" href="src/styles/components/header.css" />
-    <link rel="stylesheet" href="src/styles/components/info.css" />
-    <link rel="stylesheet" href="src/styles/components/details.css" />
-    <link rel="stylesheet" href="src/styles/components/slider.css" />
-    <link rel="stylesheet" href="src/styles/components/footer.css" />
+    <link rel="stylesheet" href="src/styles/index.css" />
+    <script type="module" src="src/js/index.js" defer></script>
     <title>WeatherApp</title>
   </head>
   <body>
-    <h1 class="visually-hidden">приложение погоды в реальном времени</h1>
     <div class="container">
       <header class="header grid">
-        <img
-          class="header__logo"
-          alt="логотип приложения weatherapp"
-          src="public/logo/logo.svg"
-          width="192"
-          height="31" />
+        <svg class="header__logo" viewBox="0 0 192 48" width="192" height="48">
+          <use href="public/icons/general.svg#logo"></use>
+        </svg>
         <search>
           <form
             class="header__search-form"
@@ -50,20 +35,25 @@
               placeholder="Поиск по городу" />
             <div class="header__search-type">
               <button class="header__search-button type--search" type="button" aria-label="начать поиск" tabindex="-1">
-                <img src="public/icons/search.svg" aria-hidden="true" width="24" height="24" />
+                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+                  <use href="public/icons/general.svg#search"></use>
+                </svg>
               </button>
               <button
                 class="header__search-button type--clear button--remove"
                 type="reset"
                 aria-label="очистить поле"
                 tabindex="-1">
-                <img src="public/icons/close.svg" aria-hidden="true" width="24" height="24" />
+                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+                  <use href="public/icons/general.svg#close"></use>
+                </svg>
               </button>
             </div>
           </form>
         </search>
       </header>
       <main class="main grid">
+        <h1 class="visually-hidden">приложение погоды в реальном времени</h1>
         <section class="weather-info"></section>
         <section class="weather-details">
           <ul class="weather-details__list">
@@ -91,9 +81,5 @@
       </main>
       <footer></footer>
     </div>
-
-    <!-- javascript -->
-    <script src="src/js/header-search.js"></script>
-    <script type="module" src="src/js/main.js"></script>
   </body>
 </html>
