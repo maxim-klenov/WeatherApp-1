@@ -6,18 +6,22 @@
 
   --font-size-112: 11.2rem;
   --font-size-32: 3.2rem;
-  --font-size-20: 2rem;
   --font-size-24: 2.4rem;
+  --font-size-20: 2rem;
   --font-size-16: 1.6rem;
   --font-size-12: 1.2rem;
 
-  --color-light: rgba(245, 244, 244, 1);
-  --color-grey: rgba(112, 112, 112, 1);
-  --color-dark: rgba(84, 84, 84, 1);
-  --color-black: rgba(32, 32, 32, 1);
-  --bg-color-light: rgba(245, 244, 244, 0.4);
-  --bg-color-light-accent: rgba(218, 218, 218, 1);
-  --bg-color-layer: rgba(112, 112, 112, 0.1);
+  --color-light: hsl(0, 5%, 96%);
+  --color-grey: hsl(0, 0%, 65%);
+  --color-dark: hsl(0, 0%, 33%);
+  --color-black: hsl(0, 0%, 13%);
+  --bg-color-light: hsla(0, 5%, 96%, 0.4);
+  --bg-color-light-accent: hsl(0, 0%, 85%);
+  --bg-color-layer: hsla(0, 0%, 44%, 0.1);
+
+  --size-small: 0.8rem;
+  --size-middle: 1.6rem;
+  --size-big: 3.2rem;
 
   --border-radius: 8px;
 }

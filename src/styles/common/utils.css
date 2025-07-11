@@ -13,6 +13,7 @@
   grid-template-columns: 1fr 50.6rem;
   align-items: center;
   column-gap: 1.6rem;
+  row-gap: 3.2rem;
 }
 
 .visually-hidden {
