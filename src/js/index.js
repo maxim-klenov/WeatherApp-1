@@ -1,2 +1,3 @@
 import "./header-search.js";
-import "./meteodata.js";
+import "./main-data.js";
+import "./slider.js";
