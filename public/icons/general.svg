@@ -186,5 +186,9 @@
     </defs>
   </symbol>
 
+  <symbol id="slider-control" viewBox="0 0 24 24" fill="none">
+    <path d="M16 3L7 12L16 21" stroke="#545454" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+
 
 </svg>
