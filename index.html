@@ -77,9 +77,102 @@
             </li>
           </ul>
         </section>
-        <section class="slider"></section>
+        <section class="slider">
+          <header class="slider__heading">
+            <h2 class="slider__heading-title">Прогноз:</h2>
+            <button class="slider__heading-tab active" type="button" aria-pressed="true" id="24-hours">
+              на 24 часа
+            </button>
+            <button class="slider__heading-tab" type="button" id="5-days">на 5 дней</button>
+          </header>
+          <div class="slider__wrapper">
+            <button
+              class="slider__control control--left"
+              type="button"
+              aria-label="Прокрутить влево"
+              disabled
+              aria-disabled="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+                <use href="public/icons/general.svg#slider-control"></use>
+              </svg>
+            </button>
+            <button class="slider__control control--right" type="button" aria-label="Прокрутить вправо">
+              <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+                <use href="public/icons/general.svg#slider-control"></use>
+              </svg>
+            </button>
+            <ul class="slider__list" id="24-hours">
+              <li class="slider__list-item">
+                <div class="item-inner">
+                  <time datetime="00:00">00:00</time>
+                  <svg role="img" viewBox="0 0 24 24" width="24" height="24" aria-label="Облачно">
+                    <use href="public/icons/night-sprite.svg#04n"></use>
+                  </svg>
+                  <span>-0°</span>
+                </div>
+              </li>
+              <li class="slider__list-item">
+                <div class="item-inner">
+                  <time datetime="00:00">00:00</time>
+                  <svg role="img" viewBox="0 0 24 24" width="24" height="24" aria-label="Облачно">
+                    <use href="public/icons/night-sprite.svg#04n"></use>
+                  </svg>
+                  <span>-0°</span>
+                </div>
+              </li>
+              <li class="slider__list-item">
+                <div class="item-inner">
+                  <time datetime="00:00">00:00</time>
+                  <svg role="img" viewBox="0 0 24 24" width="24" height="24" aria-label="Облачно">
+                    <use href="public/icons/night-sprite.svg#04n"></use>
+                  </svg>
+                  <span>-0°</span>
+                </div>
+              </li>
+              <li class="slider__list-item">
+                <div class="item-inner">
+                  <time datetime="00:00">00:00</time>
+                  <svg role="img" viewBox="0 0 24 24" width="24" height="24" aria-label="Облачно">
+                    <use href="public/icons/night-sprite.svg#04n"></use>
+                  </svg>
+                  <span>-0°</span>
+                </div>
+              </li>
+              <li class="slider__list-item">
+                <div class="item-inner">
+                  <time datetime="00:00">00:00</time>
+                  <svg role="img" viewBox="0 0 24 24" width="24" height="24" aria-label="Облачно">
+                    <use href="public/icons/night-sprite.svg#04n"></use>
+                  </svg>
+                  <span>-0°</span>
+                </div>
+              </li>
+              <li class="slider__list-item">
+                <div class="item-inner">
+                  <time datetime="00:00">00:00</time>
+                  <svg role="img" viewBox="0 0 24 24" width="24" height="24" aria-label="Облачно">
+                    <use href="public/icons/night-sprite.svg#04n"></use>
+                  </svg>
+                  <span>-0°</span>
+                </div>
+              </li>
+              <li class="slider__list-item">
+                <div class="item-inner">
+                  <time datetime="00:00">00:00</time>
+                  <svg role="img" viewBox="0 0 24 24" width="24" height="24" aria-label="Облачно">
+                    <use href="public/icons/night-sprite.svg#04n"></use>
+                  </svg>
+                  <span>-0°</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
       </main>
-      <footer></footer>
+      <footer class="footer">
+        Проект выполнен в рамках стажировки&nbsp;
+        <a class="footer__link" href="https://preax.ru" target="_blank" rel="noopener noreferrer">PREAX</a>
+      </footer>
     </div>
   </body>
 </html>
