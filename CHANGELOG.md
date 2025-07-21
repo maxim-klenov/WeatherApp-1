@@ -1,8 +1,14 @@
 # Changelog
 
+## [3.1] - Jul 21, 2025
+
+_Task 3 - WeatherApp 1 - 3 - debug_
+
+- [js - refactor: destructuring vars](https://github.com/maxim-klenov/WeatherApp-1/commit/16871c1373a6adbf1ec7f019570173a4589279c0)
+
 ## [3.0] - Jul 11, 2025
 
-_Task 3 - WatherApp 1 - 3_
+_Task 3 - WetherApp 1 - 3_
 
 - [src - new: file "gitignore"](https://github.com/maxim-klenov/WeatherApp-1/commit/99adb89a767ed04c8f2d1e1aa12657b8f5631f82)
 - [src - refactor: svg -> sprite](https://github.com/maxim-klenov/WeatherApp-1/commit/59defa4e0dbecfe7d6219d6e0c91ab137e548d7e)
