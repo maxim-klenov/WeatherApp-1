@@ -1,8 +1,3 @@
-- [PREVIEW](https://maxim-klenov.github.io/WeatherApp-1/)
-- [LICENSE](https://github.com/maxim-klenov/WeatherApp-1/blob/main/LICENSE)
-
-
-
 <h1> WeatherApp - погода в режиме реального времени. </h1> 
 
 <p> Точный прогноз погоды на ближайшие дни в вашем городе, где бы вы ни находились!</p>
@@ -14,7 +9,7 @@
 
 <span>
 
-[![HTML5](https://img.shields.io/badge/HTML-5-orange)](https://www.w3.org/html/)  [![CSS3](https://img.shields.io/badge/CSS-3-blue)](https://www.w3.org/Style/CSS/)  [![WebP](https://img.shields.io/badge/Images-WebP-green)](https://developers.google.com/speed/webp)  [![Accessibility](https://img.shields.io/badge/WCAG-2.1-important)](https://www.w3.org/WAI/standards-guidelines/wcag/)  [![License](https://img.shields.io/badge/License-MIT-07ab6c.svg)](https://opensource.org/licenses/MIT)
+[![HTML5](https://img.shields.io/badge/HTML-5-orange)](https://www.w3.org/html/)  [![CSS3](https://img.shields.io/badge/CSS-3-blue)](https://www.w3.org/Style/CSS/)  [![WebP](https://img.shields.io/badge/Images-WebP-green)](https://developers.google.com/speed/webp)  [![Accessibility](https://img.shields.io/badge/WCAG-2.1-important)](https://www.w3.org/WAI/standards-guidelines/wcag/)  [![Лицензия](https://img.shields.io/badge/License-MIT-07ab6c.svg)](https://opensource.org/licenses/MIT)
 
 </span>
 
@@ -53,11 +48,11 @@ project-root/
 
 Этот проект лицензирован в соответствии с [лицензией MIT](LICENSE/) — подробности см. в ней.
 
-<br> 
-
 ## История изменений
 
 Смотреть всю историю изменений проекта в соответствующем файле [changelog](https://github.com/maxim-klenov/WeatherApp-1/blob/main/CHANGELOG.md)
+
+<br> 
 
 ## Слова признательности
 
