@@ -1,7 +1,7 @@
 import { weatherData, unit } from "../data/data.js";
 const containerWeather = document.querySelector(".weather-info");
 const containerDetailed = document.querySelector(".weather-details__list");
-
+const [user, weather, detailed] = weatherData;
 let fragment = document.createDocumentFragment();
 
 function insertUser(userInfo) {
@@ -14,7 +14,7 @@ function insertUser(userInfo) {
       `;
   fragment.appendChild(address);
 }
-insertUser(weatherData[0].user);
+insertUser(user);
 
 function insertWeatherInfo(weatherInfo) {
   let spanElement = document.createElement("span");
@@ -34,7 +34,7 @@ function insertWeatherInfo(weatherInfo) {
   fragment.appendChild(spanElement);
   fragment.appendChild(divElement);
 }
-insertWeatherInfo(weatherData[1].weather);
+insertWeatherInfo(weather);
 containerWeather.appendChild(fragment);
 
 fragment = document.createDocumentFragment();
@@ -83,6 +83,6 @@ function insertDetailedInfo(detailedInfo) {
     fragment.appendChild(card);
   })
 }
-insertDetailedInfo(weatherData[2].detailed);
+insertDetailedInfo(detailed);
 containerDetailed.innerHTML = "";
 containerDetailed.appendChild(fragment);

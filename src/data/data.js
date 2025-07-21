@@ -14,83 +14,77 @@ const weatherTypes = [
 
 const weatherData = [
   {
-    "user": {
-      "town": "Москва",
-      "date": "Суббота, 06 января",
-      "time": "11:29"
-    }
+    "town": "Москва",
+    "date": "Суббота, 06 января",
+    "time": "11:29"
   },
   {
-    "weather": {
-      "temperature": -7,
-      "condition": {
-        "src": "public/icons/general.svg#cloud",
-        "caption": "Облачно",
-        "feelTemp": -11
-      }
+    "temperature": -7,
+    "condition": {
+      "src": "public/icons/general.svg#cloud",
+      "caption": "Облачно",
+      "feelTemp": -11
     }
   },
-  {
-    "detailed": [
-      {
-        "title": "Влажность",
-        "src": "humidity",
-        "value": "75 %",
-        "meteobar": {
-          "type": "progress",
-          "min": "0",
-          "max": "100",
-          "value": "60"
-        },
-        "description": "0%~@~100%"
+  [
+    {
+      "title": "Влажность",
+      "src": "humidity",
+      "value": "75 %",
+      "meteobar": {
+        "type": "progress",
+        "min": "0",
+        "max": "100",
+        "value": "60"
       },
-      {
-        "title": "Давление",
-        "src": "barometr",
-        "value": "761",
-        "meteobar": {
-          "type": "pressure",
-          "min": "0",
-          "max": "100",
-          "value": "76"
-        },
-        "description": "Повышенное"
+      "description": "0%~@~100%"
+    },
+    {
+      "title": "Давление",
+      "src": "barometr",
+      "value": "761",
+      "meteobar": {
+        "type": "pressure",
+        "min": "0",
+        "max": "100",
+        "value": "76"
       },
-      {
-        "title": "Видимость",
-        "src": "visibility",
-        "value": "28 км",
-        "meteobar": {
-          "type": "progress",
-          "min": "0",
-          "max": "100",
-          "value": "20"
-        },
-        "description": "Нормальная"
+      "description": "Повышенное"
+    },
+    {
+      "title": "Видимость",
+      "src": "visibility",
+      "value": "28 км",
+      "meteobar": {
+        "type": "progress",
+        "min": "0",
+        "max": "100",
+        "value": "20"
       },
-      {
-        "title": "Рассвет",
-        "src": "sunrise",
-        "value": "8:42",
-        "meteobar": null,
-        "description": "Прошло: 02:47"
-      },
-      {
-        "title": "Закат",
-        "src": "sunset",
-        "value": "16:37",
-        "meteobar": null,
-        "description": "Осталось: 05:08"
-      },
-      {
-        "title": "Сила ветра",
-        "src": "direction-northwest",
-        "value": "2 м/с",
-        "meteobar": null,
-        "description": "Северо-западный"
-      }
-    ]
-  }
+      "description": "Нормальная"
+    },
+    {
+      "title": "Рассвет",
+      "src": "sunrise",
+      "value": "8:42",
+      "meteobar": null,
+      "description": "Прошло: 02:47"
+    },
+    {
+      "title": "Закат",
+      "src": "sunset",
+      "value": "16:37",
+      "meteobar": null,
+      "description": "Осталось: 05:08"
+    },
+    {
+      "title": "Сила ветра",
+      "src": "direction-northwest",
+      "value": "2 м/с",
+      "meteobar": null,
+      "description": "Северо-западный"
+    }
+  ]
 ];
 
 const weather24 = [
