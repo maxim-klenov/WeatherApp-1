@@ -4,12 +4,14 @@
   --font-family-semibold: "raleway-semibold", sans-serif;
   --font-family-bold: "raleway-bold", sans-serif;
 
-  --font-size-112: 11.2rem;
-  --font-size-32: 3.2rem;
-  --font-size-24: 2.4rem;
-  --font-size-20: 2rem;
-  --font-size-16: 1.6rem;
-  --font-size-12: 1.2rem;
+  --root-persent: 62.5%; /* 62.5% of 16px = 10px */
+  --root-persent-mobile: clamp(48%, calc(2vw - 33%), var(--root-persent));
+  --font-size-2xl: 11.2rem;
+  --font-size-xl: 3.2rem;
+  --font-size-lg: 2.4rem;
+  --font-size-md: 2rem;
+  --font-size-base: 1.6rem;
+  --font-size-sm: 1.2rem;
 
   --color-light: hsl(0, 5%, 96%);
   --color-grey: hsl(0, 0%, 65%);
@@ -19,6 +21,7 @@
   --bg-color-light-accent: hsl(0, 0%, 85%);
   --bg-color-layer: hsla(0, 0%, 44%, 0.1);
 
+  --default-container-width: 112rem;
   --size-small: 0.8rem;
   --size-middle: 1.6rem;
   --size-big: 3.2rem;

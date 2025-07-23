@@ -1,10 +1,10 @@
 .slider {
   height: 19.2rem;
-  grid-column: 1 / 3;
+  grid-column: 1 / -1;
   padding-block-start: var(--size-big);
   display: flex;
   flex-direction: column;
-  row-gap: 2.9rem;
+  row-gap: 3rem;
 }
 
 .slider__heading {
@@ -14,15 +14,15 @@
 }
 
 .slider__heading-title {
-  font-size: var(--font-size-24);
+  font-size: var(--font-size-lg);
   font-family: var(--font-family-bold);
 }
 
 .slider__heading-tab {
-  font-size: var(--font-size-16);
+  font-size: var(--font-size-base);
   font-family: var(--font-family-bold);
   color: var(--color-grey);
-  line-height: 35px;
+  line-height: 2.3;
   border: unset;
   padding: 0;
   &.active {
@@ -51,6 +51,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 2.4rem;
+    height: 2.4rem;
   }
   &:hover:not(&[disabled]) {
     background-color: var(--bg-color-light-accent);
@@ -73,7 +75,7 @@
   --mask: linear-gradient(to right, #0000 16px, #000 32px, #000 calc(100% - 32px), #0000 calc(100% - 16px));
   display: flex;
   align-items: center;
-  column-gap: var(--size-middle);
+  column-gap: 1.7rem;
   overflow-x: auto;
   padding-inline: var(--size-big);
   scrollbar-width: none;
@@ -87,9 +89,52 @@
   align-items: center;
   padding: var(--size-middle);
   width: fit-content;
-  column-gap: var(--size-middle);
-  font-size: var(--font-size-16);
+  gap: var(--size-middle);
+  font-size: var(--font-size-base);
   color: var(--color-black);
   cursor: default;
   text-wrap: nowrap;
+  & svg {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+}
+
+@media screen and (width <= 1024px) {
+  .slider {
+    height: unset;
+    padding-block-start: unset;
+    row-gap: 2.4rem;
+  }
+  .slider__heading-tab {
+    line-height: 1.8;
+  }
+  .slider__list {
+    column-gap: 1.2rem;
+  }
+}
+
+@media screen and (width <= 886px) {
+  .item-inner {
+    flex-direction: column;
+    padding-top: 2.4rem;
+  }
+}
+
+@media screen and (width <= 768px) {
+  .item-inner {
+    flex-direction: row;
+    padding: var(--size-middle) 2rem var(--size-middle);
+  }
+  .slider__control {
+    padding: 0.7rem 1.3rem;
+  }
+}
+
+@media screen and (width <= 639px) {
+  .item-inner {
+    flex-direction: column;
+    padding: 1.5625rem;
+    gap: 1.5625rem;
+  }
 }

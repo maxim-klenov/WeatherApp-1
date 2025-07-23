@@ -14,7 +14,7 @@ const weatherTypes = [
 
 const weatherData = [
   {
-    "town": "Москва",
+    "town": "Кременчуг-константиновское",
     "date": "Суббота, 06 января",
     "time": "11:29"
   },
@@ -22,7 +22,7 @@ const weatherData = [
     "temperature": -7,
     "condition": {
       "src": "public/icons/general.svg#cloud",
-      "caption": "Облачно",
+      "caption": "Облачно с прояснениями",
       "feelTemp": -11
     }
   },

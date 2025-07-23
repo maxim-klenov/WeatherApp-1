@@ -2,6 +2,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--size-middle);
+  width: 50.6rem;
+  margin-inline: auto;
 }
 
 .weather-details__list-item {
@@ -17,11 +19,15 @@
   padding-top: 2rem;
   text-align: center;
   color: var(--color-black);
+  svg {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
 }
 
 .item-title {
   font-family: var(--font-family-bold);
-  font-size: var(--font-size-16);
+  font-size: var(--font-size-base);
 }
 
 .item-icon {
@@ -30,7 +36,7 @@
 }
 
 .item-value {
-  font-size: var(--font-size-32);
+  font-size: var(--font-size-xl);
   font-weight: var(--font-weight-normal);
 }
 
@@ -152,11 +158,38 @@
 
 .item-meteobar__description {
   color: rgba(57, 57, 57, 1);
-  font-weight: var(--font-weight-normal);
-  font-size: var(--font-size-12);
+  font-family: var(--font-family-semibold);
+  font-size: var(--font-size-sm);
 }
 
 .item-meteobar__description:has(span + span) {
   display: flex;
   justify-content: space-between;
+}
+
+@media screen and (width <= 768px) {
+  .weather-details__list {
+    width: 52.08rem;
+  }
+  .weather-details__list-item {
+    width: 16.666rem;
+    height: 19.27rem;
+  }
+  .item-value {
+    line-height: 1.2;
+  }
+}
+
+@media screen and (width <= 650px) {
+  .weather-details__list {
+    width: fit-content;
+    max-width: 52rem;
+  }
+  .weather-details__list-item {
+    width: 100%;
+    padding-inline: 1.5625rem;
+  }
+  .item-meteobar__description {
+    font-size: 1.302rem;
+  }
 }

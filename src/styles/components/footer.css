@@ -8,3 +8,15 @@ footer {
 .footer__link {
   color: var(--color-light);
 }
+
+@media screen and (width <= 887px) {
+  footer {
+    height: 12rem;
+  }
+}
+
+@media screen and (width <= 768px) {
+  footer {
+    height: 11rem;
+  }
+}

@@ -2,10 +2,8 @@
   background-color: var(--bg-color-layer);
   backdrop-filter: blur(25px);
   border-radius: var(--border-radius);
-  max-width: 112rem;
-  width: 100%; /* Fluid width */
-  min-width: min(112rem, 100%);
-  margin: 32px auto;
+  max-width: var(--default-container-width);
+  width: 100%;
 }
 
 .grid {
@@ -27,4 +25,20 @@
   clip-path: inset(100%) !important;
   clip: rect(0 0 0 0) !important;
   overflow: hidden !important;
+}
+
+@media screen and (width <= 1024px) {
+  .main.grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 4.8rem;
+  }
+  .main.grid > * {
+    grid-column: 1 / -1;
+  }
+}
+
+@media screen and (width <= 768px) {
+  .main.grid {
+    row-gap: 4rem;
+  }
 }
