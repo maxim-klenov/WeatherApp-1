@@ -1,5 +1,10 @@
 # Changelog
 
+## [4.0] - Jul 23, 2025
+
+- [src - refactor: logo mobile/desktop](https://github.com/maxim-klenov/WeatherApp-1/commit/c28b0da88cb64b0ad65d6fbb244d762b4c54c483)
+- [css, js - new: dimentions for mobile/tablet/desctop](https://github.com/maxim-klenov/WeatherApp-1/commit/eb24b7cabf8a5e5ccb12c3f42b80c1e12af18a5a)
+
 ## [3.1] - Jul 21, 2025
 
 _Task 3 - WeatherApp 1 - 3 - debug_
