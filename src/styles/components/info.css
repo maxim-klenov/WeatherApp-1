@@ -3,15 +3,28 @@
 }
 .weather-info {
   display: grid;
-  row-gap: clamp(2.4rem, calc(8vw - 3rem), 5.2rem);
+  row-gap: 6.4rem;
   text-align: center;
   padding-inline: 2rem;
+  @media screen and (width <= 1280px) {
+    row-gap: clamp(5.2rem, calc(6vw - 1rem), 6.4rem);
+  }
+
+  @media screen and (width <= 1024px) {
+    row-gap: clamp(2.4rem, calc(30vw - 25rem), 5.2rem);
+  }
 }
 
 .weather-info__user-location {
   display: grid;
   row-gap: 1rem;
   font-size: var(--font-size-md);
+
+  @media screen and (width <= 768px) {
+    & time:last-child {
+      line-height: 0.5;
+    }
+  }
 }
 
 .user-location-town {
@@ -36,20 +49,8 @@
   align-items: center;
   justify-content: center;
   column-gap: var(--size-small);
-  & svg {
+  & img {
     height: 2.4rem;
     width: 2.4rem;
-  }
-}
-
-@media screen and (width <= 887px) {
-  .weather-info {
-    row-gap: 2.4rem;
-  }
-}
-
-@media screen and (width <= 768px) {
-  .weather-info__user-location time:last-child {
-    line-height: 0.5;
   }
 }

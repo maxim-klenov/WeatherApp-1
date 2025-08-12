@@ -1,5 +1,9 @@
 html {
   font-size: var(--root-persent);
+
+  @media screen and (width <= 768px) {
+    font-size: var(--root-persent-mobile);
+  }
 }
 body {
   font-family: var(--font-family-regular);
@@ -16,41 +20,22 @@ body {
   background-attachment: fixed;
   margin: var(--size-big) max(calc((100vw - var(--default-container-width)) / 2), var(--size-big));
   /* calc(..) - тоже что и "auto", max() - выбирает наибольшее из 2 */
-}
 
-.container > * {
-  padding: var(--size-big);
-}
-
-@media screen and (width <= 1024px) {
-  :root {
-    --size-big: clamp(2.4rem, calc(5.8vw - 2.7rem), 3.2rem);
-  }
-  .container > *:not(.footer) {
-    padding: var(--size-big);
-  }
-}
-
-@media screen and (width <= 768px) {
-  :root {
-    --root-persent-number-mobile: calc(16px * 0.48);
-
-    --font-size-2xl: 7.29rem;
-    --font-size-lg: 2.083rem;
-    --font-size-md: 1.822rem;
-
-    --size-big: 2.08333rem;
-    --size-middle: 1.041rem;
-  }
-  html {
-    font-size: var(--root-persent-mobile);
-  }
-}
-
-@media screen and (width <= 640px) {
-  body {
+  @media screen and (width <= 640px) {
     padding: 16px;
     min-width: 375px;
     margin: 0;
+  }
+}
+
+.container {
+  > * {
+    padding: var(--size-big);
+
+    @media screen and (width <= 1024px) {
+      &:not(.footer) {
+        padding: var(--size-big);
+      }
+    }
   }
 }

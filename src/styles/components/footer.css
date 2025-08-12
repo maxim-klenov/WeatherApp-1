@@ -3,20 +3,16 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (width <= 1024px) {
+    height: 12rem;
+  }
+
+  @media screen and (width <= 768px) {
+    height: 11rem;
+  }
 }
 
 .footer__link {
   color: var(--color-light);
-}
-
-@media screen and (width <= 887px) {
-  footer {
-    height: 12rem;
-  }
-}
-
-@media screen and (width <= 768px) {
-  footer {
-    height: 11rem;
-  }
 }

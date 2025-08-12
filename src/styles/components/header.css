@@ -1,13 +1,43 @@
+.header.grid {
+  @media screen and (width <= 1024px) {
+    grid-template-columns: max-content 1fr;
+    column-gap: 13.5rem;
+    search {
+      margin-left: auto;
+      width: 100%;
+    }
+  }
+
+  @media screen and (width <= 768px) {
+    column-gap: 17.578rem;
+  }
+
+  @media screen and (width <= 640px) {
+    column-gap: clamp(2.0833rem, calc(60vw - 30rem), 17.578rem);
+  }
+}
+
 .header__logo {
-  /* width: if(media(width > var(--breakpoint-large)): 19.2rem; else: 5.4rem;); */
-  /* жаль не поддерживается :)  */
   height: 4.8rem;
   &#desktop {
     width: 19.2rem;
+
+    @media screen and (width <= 1024px) {
+      display: none;
+    }
   }
-  &#mobile {
+  &#tablet {
     width: 5.4rem;
     display: none;
+
+    @media screen and (width <= 1024px) {
+      display: block;
+    }
+
+    @media screen and (width <= 768px) {
+      width: 4rem;
+      height: 4rem;
+    }
   }
 }
 
@@ -26,6 +56,10 @@
   background-color: var(--bg-color-light);
   color: var(--color-black);
   transition: background-color 100ms ease;
+
+  @media screen and (width <= 768px) {
+    padding: 1.0416rem 5.2rem 1.0416rem 1.5625rem;
+  }
 }
 
 .header__search-input:hover,
@@ -54,56 +88,21 @@
   width: 5.6rem;
   height: 4.8rem;
   user-select: none;
-  & svg {
+  & img {
     width: 2.4rem;
     height: 2.4rem;
   }
+
+  @media screen and (width <= 768px) {
+    height: 4rem;
+  }
 }
 
-.type--clear:hover svg {
+.type--clear:hover img {
   filter: brightness(40%) contrast(120%) grayscale(100%);
-  /* цвет крестика #202020 кода фокус инпута исчез */
+  /* цвет крестика #202020 когда фокус инпута исчез */
 }
 
 .button--remove {
   display: none;
-}
-
-@media screen and (width <= 1024px) {
-  .header__logo#desktop {
-    display: none;
-  }
-  .header__logo#mobile {
-    display: block;
-  }
-  .header.grid {
-    grid-template-columns: max-content 1fr;
-    column-gap: 13.5rem;
-    search {
-      margin-left: auto;
-      width: 100%;
-    }
-  }
-}
-
-@media screen and (width <= 768px) {
-  .header__logo#mobile {
-    width: 4rem;
-    height: 4rem;
-  }
-  .header.grid {
-    column-gap: 17.578rem;
-  }
-  .header__search-input {
-    padding: 1.0416rem 5.2rem 1.0416rem 1.5625rem;
-  }
-  .header__search-button {
-    height: 4rem;
-  }
-}
-
-@media screen and (width <= 639px) {
-  .header.grid {
-    column-gap: clamp(2.0833rem, calc(60vw - 30rem), 17.578rem);
-  }
 }
