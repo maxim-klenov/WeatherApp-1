@@ -1,14 +1,14 @@
 import { weatherData, unit } from "../data/data.js";
+const [user, weather, detailed] = weatherData;
 const containerWeather = document.querySelector(".weather-info");
 const containerDetailed = document.querySelector(".weather-details__list");
-const [user, weather, detailed] = weatherData;
 let fragment = document.createDocumentFragment();
 
 function insertUser(userInfo) {
   let address = document.createElement("address");
   address.className = "weather-info__user-location";
   address.innerHTML = `
-        <span class="user-location-town">${userInfo.town}</span>
+        <h2 class="user-location-town">${userInfo.town}</h2>
         <time datetime="${userInfo.date}">${userInfo.date}</time>
         <time datetime="${userInfo.time}">${userInfo.time}</time>
       `;
@@ -24,9 +24,7 @@ function insertWeatherInfo(weatherInfo) {
   divElement.className = "weather-info__weather";
   divElement.innerHTML = `
         <div class="weather-type">
-           <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-              <use href="${weatherInfo.condition.src}"></use>
-          </svg>
+          <img src="${weatherInfo.condition.src}" alt="" width="24" height="24" aria-hidden="true">
           <span>${weatherInfo.condition.caption}</span>
         </div>
         <span class="weather-feel-temp">Ощущается как ${weatherInfo.condition.feelTemp}${unit}</span>
@@ -66,9 +64,7 @@ function insertDetailedInfo(detailedInfo) {
     card.innerHTML = `
           <div class="weather-details__list-item">
             <h2 class="item-title">${dataItem.title}</h2>
-            <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
-              <use href="public/icons/general.svg#${dataItem.src}"></use>
-            </svg>
+            <img src="public/icons/general/meteobars/${dataItem.src}.svg" alt="" width="32" height="32" aria-hidden="true">
             <output
               class="item-value"
               role="status"

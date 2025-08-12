@@ -14,12 +14,20 @@
   <body>
     <div class="container">
       <header class="header grid">
-        <svg class="header__logo" id="desktop" viewBox="0 0 192 48" width="192" height="48">
-          <use href="public/icons/general.svg#logo-tablet"></use>
-        </svg>
-        <svg class="header__logo" id="mobile" viewBox="0 0 54 48" width="54" height="48">
-          <use href="public/icons/general.svg#logo-mobile"></use>
-        </svg>
+        <img
+          class="header__logo"
+          id="desktop"
+          alt="логотип сайта weatherapp"
+          src="public/icons/general/logo-desktop.svg"
+          width="192"
+          height="192" />
+        <img
+          class="header__logo"
+          id="tablet"
+          alt="логотип сайта weatherapp"
+          src="public/icons/general/logo-tablet.svg"
+          width="54"
+          height="48" />
         <search>
           <form
             class="header__search-form"
@@ -38,18 +46,26 @@
               placeholder="Поиск по городу" />
             <div class="header__search-type">
               <button class="header__search-button type--search" type="button" aria-label="начать поиск" tabindex="-1">
-                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-                  <use href="public/icons/general.svg#search"></use>
-                </svg>
+                 <img
+                  class="header__search-button type--search"
+                  alt=""
+                  aria-hidden="true"
+                  src="public/icons/general/search.svg"
+                  width="24"
+                  height="24" />
               </button>
               <button
                 class="header__search-button type--clear button--remove"
                 type="reset"
                 aria-label="очистить поле"
                 tabindex="-1">
-                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-                  <use href="public/icons/general.svg#close"></use>
-                </svg>
+                 <img
+                  class="header__search-button type--search"
+                  alt=""
+                  aria-hidden="true"
+                  src="public/icons/general/close.svg"
+                  width="24"
+                  height="24" />
               </button>
             </div>
           </form>
@@ -83,10 +99,10 @@
         <section class="slider">
           <header class="slider__heading">
             <h2 class="slider__heading-title">Прогноз:</h2>
-            <button class="slider__heading-tab active" type="button" aria-pressed="true" id="24-hours">
+            <button class="slider__heading-tab active" type="button" aria-pressed="true" data-slider-id="24-hours">
               на 24 часа
             </button>
-            <button class="slider__heading-tab" type="button" id="5-days">на 5 дней</button>
+            <button class="slider__heading-tab" type="button" data-slider-id="5-days">на 5 дней</button>
           </header>
           <div class="slider__wrapper">
             <button
@@ -95,76 +111,51 @@
               aria-label="Прокрутить влево"
               disabled
               aria-disabled="true">
-              <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-                <use href="public/icons/general.svg#slider-control"></use>
-              </svg>
+              <img src="public/icons/general/slider-control.svg" alt="" width="24" height="24" aria-hidden="true" />
             </button>
             <button class="slider__control control--right" type="button" aria-label="Прокрутить вправо">
-              <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-                <use href="public/icons/general.svg#slider-control"></use>
-              </svg>
+              <img src="public/icons/general/slider-control.svg" alt="" width="24" height="24" aria-hidden="true" />
             </button>
-            <ul class="slider__list" id="24-hours">
+            <ul class="slider__list" tabindex="-1" id="24-hours">
               <li class="slider__list-item">
                 <div class="item-inner">
                   <time datetime="00:00">00:00</time>
-                  <svg role="img" viewBox="0 0 24 24" width="24" height="24" aria-label="Облачно">
-                    <use href="public/icons/night-sprite.svg#04n"></use>
-                  </svg>
+                  <img src="public/icons/night/04n.svg" alt="Облачно" width="32" height="32" />
                   <span>-0°</span>
                 </div>
               </li>
               <li class="slider__list-item">
                 <div class="item-inner">
                   <time datetime="00:00">00:00</time>
-                  <svg role="img" viewBox="0 0 24 24" width="24" height="24" aria-label="Облачно">
-                    <use href="public/icons/night-sprite.svg#04n"></use>
-                  </svg>
+                  <img src="public/icons/night/04n.svg" alt="Облачно" width="32" height="32" />
                   <span>-0°</span>
                 </div>
               </li>
               <li class="slider__list-item">
                 <div class="item-inner">
                   <time datetime="00:00">00:00</time>
-                  <svg role="img" viewBox="0 0 24 24" width="24" height="24" aria-label="Облачно">
-                    <use href="public/icons/night-sprite.svg#04n"></use>
-                  </svg>
+                  <img src="public/icons/night/04n.svg" alt="Облачно" width="32" height="32" />
                   <span>-0°</span>
                 </div>
               </li>
               <li class="slider__list-item">
                 <div class="item-inner">
                   <time datetime="00:00">00:00</time>
-                  <svg role="img" viewBox="0 0 24 24" width="24" height="24" aria-label="Облачно">
-                    <use href="public/icons/night-sprite.svg#04n"></use>
-                  </svg>
+                  <img src="public/icons/night/04n.svg" alt="Облачно" width="32" height="32" />
                   <span>-0°</span>
                 </div>
               </li>
               <li class="slider__list-item">
                 <div class="item-inner">
                   <time datetime="00:00">00:00</time>
-                  <svg role="img" viewBox="0 0 24 24" width="24" height="24" aria-label="Облачно">
-                    <use href="public/icons/night-sprite.svg#04n"></use>
-                  </svg>
+                  <img src="public/icons/night/04n.svg" alt="Облачно" width="32" height="32" />
                   <span>-0°</span>
                 </div>
               </li>
               <li class="slider__list-item">
                 <div class="item-inner">
                   <time datetime="00:00">00:00</time>
-                  <svg role="img" viewBox="0 0 24 24" width="24" height="24" aria-label="Облачно">
-                    <use href="public/icons/night-sprite.svg#04n"></use>
-                  </svg>
-                  <span>-0°</span>
-                </div>
-              </li>
-              <li class="slider__list-item">
-                <div class="item-inner">
-                  <time datetime="00:00">00:00</time>
-                  <svg role="img" viewBox="0 0 24 24" width="24" height="24" aria-label="Облачно">
-                    <use href="public/icons/night-sprite.svg#04n"></use>
-                  </svg>
+                  <img src="public/icons/night/04n.svg" alt="Облачно" width="32" height="32" />
                   <span>-0°</span>
                 </div>
               </li>
