@@ -1,5 +1,15 @@
 const unit = "°";
 
+/**
+ * Массив содержащий тип погоды и код иконки
+ * 
+ * @typedef {Object} WeatherType
+ * @property {string} type - Описание на русском 
+ * @property {string} eng - Описание на англ.
+ * @property {string} night - Код иконки (ночь)
+ * @property {string} day - Код иконки (день)
+ * @type {WeatherType[]}
+ */
 const weatherTypes = [
   { type: "Солнечно", eng: "clear sky", night: "01n", day: "01d" },
   { type: "Облачно с прояснениями", eng: "few clouds", night: "02n", day: "02d" },
@@ -12,6 +22,31 @@ const weatherTypes = [
   { type: "Туман", eng: "mist", night: "50n", day: "50d" },
 ];
 
+/**
+ * Главная погодная информация о городе 
+ * 
+ * @typedef {Object} User
+ * @property {string} town - Название города
+ * @property {string} date - Дата в формате "день, число, месяц"
+ * @property {string} time - Время в ч:мм.
+ * 
+ * @typedef {Object} Weather
+ * @property {number} temperature - температура
+ * @property {Object} condition - Подробные погодные условия.
+ * @property {string} condition.src - Путь иконки
+ * @property {string} condition.caption - Описание погоды
+ * @property {number} condition.feelTemp - Доп. темп. значение
+ * 
+ * @typedef {Object} Metric
+ * @property {string} title - Заголовок метрики 
+ * @property {string} src - Путь иконки (сокращенно)
+ * @property {string} value - Значение метрики
+ * @property {Object | null} meteobar - Трек метеобара
+ * @property {string} description - Доп. описание
+ * 
+ * @type {[User, Weather, Metric[]]}
+ */
+
 const weatherData = [
   {
     "town": "Кременчуг-константиновское",
@@ -21,7 +56,7 @@ const weatherData = [
   {
     "temperature": -7,
     "condition": {
-      "src": "public/icons/general.svg#cloud",
+      "src": "public/icons/day/04d.svg",
       "caption": "Облачно с прояснениями",
       "feelTemp": -11
     }
@@ -79,13 +114,24 @@ const weatherData = [
     },
     {
       "title": "Сила ветра",
-      "src": "direction-northwest",
+      "src": "directions/northwest",
       "value": "2 м/с",
       "meteobar": null,
       "description": "Северо-западный"
     }
   ]
 ];
+
+/**
+ * Погодные данные на 24 часа (slider)
+ * 
+ * @typedef {Object} Weather24Hour
+ * @property {string} time - время дня
+ * @property {string} timePeriod - "day" или "night"
+ * @property {string} weatherType - Тип погоды англ. см. `weatherTypes` (в итоге: тип иконки)
+ * @property {number} temperature - Темп. в градусах (либо значение `unit`).
+ * @type {Weather24Hour[]}
+ */
 
 const weather24 = [
   {
@@ -137,6 +183,18 @@ const weather24 = [
     "temperature": -17
   },
 ];
+
+/**
+ * Погодные данные на 5 дней (slider)
+ * 
+ * @typedef {Object} WeatherForecastDay
+ * @property {string} time - Дата (день недели, число, месяц)
+ * @property {string} timePeriod - "day" или "night".
+ * @property {string} weatherType - Тип погоды англ. см. `weatherTypes` (в итоге: тип иконки)
+ * @property {number} tempFrom - Мин. темп.
+ * @property {number} tempTo - Макс. темп.
+ * @type {WeatherForecastDay[]}
+ */
 
 const weather5 = [
   {

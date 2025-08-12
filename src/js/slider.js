@@ -8,25 +8,26 @@ const headingButtonsGroup = document.querySelectorAll(".slider__heading .slider_
 sliderGroup.addEventListener("scroll", function () {
   buttonLeft.disabled = this.scrollLeft === 0;
   buttonLeft.ariaDisabled = this.scrollLeft === 0;
-  buttonRight.disabled = this.scrollLeft + this.clientWidth >= this.scrollWidth;
-  buttonRight.ariaDisabled = this.scrollLeft + this.clientWidth >= this.scrollWidth;
+  buttonRight.disabled = this.scrollLeft + this.clientWidth + 1 >= this.scrollWidth;
+  // без +1 условие не выполняется (левый операнд меньше правого)
+  buttonRight.ariaDisabled = this.scrollLeft + this.clientWidth + 1 >= this.scrollWidth;
 })
 
 function insertData(htmlStructure) {
   sliderGroup.innerHTML = "";
   sliderGroup.appendChild(htmlStructure);
 }
-insertData(sliderData("24-hours"));
+insertData(sliderData("24-hours")); // default
 
 headingButtonsGroup.forEach(clickedButton => {
   clickedButton.addEventListener("click", () => {
-    if (clickedButton.id === sliderGroup.id) return;
+    if (clickedButton.dataset.sliderId === sliderGroup.id) return;
 
-    sliderGroup.id = clickedButton.id;
+    sliderGroup.id = clickedButton.dataset.sliderId;
     clickedButton.className = "slider__heading-tab active";
     clickedButton.ariaPressed = true;
 
-    if (clickedButton.id === "24-hours") {
+    if (clickedButton.dataset.sliderId === "24-hours") {
       headingButtonsGroup[1].className = "slider__heading-tab";
       headingButtonsGroup[1].removeAttribute("aria-pressed");
       insertData(sliderData("24-hours"));
