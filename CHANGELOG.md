@@ -1,5 +1,11 @@
 # Changelog
 
+## [4.1] - Aug 12, 2025
+
+- [src - bugfix: svg in firefox didn't work; change svg sprite to svg/img](https://github.com/maxim-klenov/WeatherApp-1/commit/396eeae747cc79259e2d3eb2daca271762d9a345)
+- [css - refactor: media nesting](https://github.com/maxim-klenov/WeatherApp-1/commit/9ce32c577feb6d7f722471aba90c942fd02ebe88)
+- [js - new: jsdoc](https://github.com/maxim-klenov/WeatherApp-1/commit/8941feada99ac54ffbe803f399d188795559f5c7)
+
 ## [4.0] - Jul 23, 2025
 
 - [src - refactor: logo mobile/desktop](https://github.com/maxim-klenov/WeatherApp-1/commit/c28b0da88cb64b0ad65d6fbb244d762b4c54c483)
